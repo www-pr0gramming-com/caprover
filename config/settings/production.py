@@ -82,11 +82,13 @@ AWS_S3_CUSTOM_DOMAIN = env("DJANGO_AWS_S3_CUSTOM_DOMAIN", default=None)
 STATICFILES_STORAGE = "test.utils.storages.StaticRootS3Boto3Storage"
 # STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 COLLECTFAST_STRATEGY = "collectfast.strategies.boto3.Boto3Strategy"
-STATIC_URL = f"https://{AWS_S3_CUSTOM_DOMAIN}/{AWS_STORAGE_BUCKET_NAME}/static/"
+STATIC_URL = (
+    f"https://002.sgp1.digitaloceanspaces.com/{AWS_STORAGE_BUCKET_NAME}/static/"
+)
 # MEDIA
 # ------------------------------------------------------------------------------
 DEFAULT_FILE_STORAGE = "test.utils.storages.MediaRootS3Boto3Storage"
-MEDIA_URL = f"https://{AWS_S3_CUSTOM_DOMAIN}/{AWS_STORAGE_BUCKET_NAME}/media/"
+MEDIA_URL = f"https://002.sgp1.digitaloceanspaces.com/{AWS_STORAGE_BUCKET_NAME}/media/"
 
 # EMAIL
 # ------------------------------------------------------------------------------
