@@ -81,8 +81,8 @@ aws_s3_domain = AWS_S3_CUSTOM_DOMAIN + "/" + f"{AWS_STORAGE_BUCKET_NAME}"
 # ------------------------
 # STATICFILES_STORAGE = "test.utils.storages.StaticRootS3Boto3Storage"
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
-# COLLECTFAST_STRATEGY = "collectfast.strategies.boto3.Boto3Strategy"
-STATIC_URL = f"https://{aws_s3_domain}/static/"
+
+STATIC_URL = f"/static/"
 # MEDIA
 # ------------------------------------------------------------------------------
 DEFAULT_FILE_STORAGE = "test.utils.storages.MediaRootS3Boto3Storage"
